@@ -9,6 +9,10 @@ html, body {
     font-size: 40px;
 }
 
+.bold-text {
+    font-weight: 500;
+}
+
 .subtitle {
     font-size: 20px;
     font-weight: 300;
