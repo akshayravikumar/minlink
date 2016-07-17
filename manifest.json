@@ -19,6 +19,9 @@
     "tabs",
     "storage"
   ],
+  "web_accessible_resources": [
+    "error.html"
+  ],
   "commands": {
     "_execute_page_action": {
       "suggested_key": {
