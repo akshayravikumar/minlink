@@ -17,6 +17,7 @@ $(document).ready(function() {
 	    numKeys++;
 	    $("#keyword-input").val("");
 	    $("#target-input").val("");
+	    setButtons();
 	}
 
 	$('#add-button').click(function() {
@@ -74,7 +75,7 @@ $(document).ready(function() {
 	    	$("tr[key='" + key + "']").remove();
 	    	numKeys--;
 	    	if (numKeys === 0) {
-		    	$('#data').html("Add entries above!");
+		    	$('#data').html("<div class='subtitle'> Add entries above! </div>");
 		    }
 	    });
 	}
@@ -100,7 +101,7 @@ $(document).ready(function() {
 		        }
 		    }
 		    if (numKeys === 0) {
-		    	$('#data').html("Add entries above!");
+		    	$('#data').html("<div class='subtitle'> Add entries above! </div>");
 		    }
 		    setButtons();
 		});
