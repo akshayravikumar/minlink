@@ -20,16 +20,16 @@
     "storage"
   ],
   "commands": {
-    "_execute_browser_action": {
+    "_execute_page_action": {
       "suggested_key": {
-        "default": "Ctrl+Shift+I",
-        "mac": "Command+Shift+I"
+        "default": "Ctrl+M",
+        "mac": "Command+M"
       }
     },
     "_execute_browser_action": {
       "suggested_key": {
-        "default": "Ctrl+Shift+Y",
-        "mac": "Command+Shift+Y"
+        "default": "Ctrl+M",
+        "mac": "Command+M"
       }
     }
   }
