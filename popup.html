@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Personal URL Shortener</title>
+        <script src="jquery.min.js"></script>
+        <script src="jquery.hotkeys.js"></script>
+        <script src="materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="materialize.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="grey lighten-5">
+    <div class="container">
+        <div id="title" class="purple-text text-darken-1">
+            Minlink
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <table id="new">
+                    <tr>
+                        <td>
+                            <div class="input-field">
+                                <input pattern='[a-zA-Z0-9-_]+' placeholder="keyword" id='keyword-input'>  
+                            </div> 
+                        </td>
+                        <td>
+                            <div class="input-field">
+                                <input  placeholder="target" id='target-input'>    
+                            </div>
+                        </td>
+                        <td class="button-column center-align">
+                            <button id="add-button" class='btn-floating green'>
+                                <i class='large material-icons'>add</i>
+                            </button>
+                            &nbsp;&nbsp;
+                            <button id="clear-button" class='btn-floating orange'>
+                                <i class='large material-icons'>clear</i>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="card" id="data-card">
+            <div class="card-content" id="data-card-content">
+                <table id="data" class="highlight">
+                </table>
+            </div>
+        </div>
+        <script src="popup.js"></script>
+    </div>
+    </body>
+</html>
+

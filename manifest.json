@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "Minlink",
+  "description": "Type 'go' to access to a shortened URL.",
+  "version": "1.1",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "omnibox": {
+    "keyword" : "go" 
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "icons": {
+    "16": "icon.png"
+  },
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+I",
+        "mac": "Command+Shift+I"
+      }
+    },
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      }
+    }
+  }
+}
