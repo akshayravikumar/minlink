@@ -1,2 +1,2 @@
 # minlink
-A random Chrome URL shortener.
+A random URL redirector Chrome extension.
