@@ -1,4 +1,4 @@
-chrome.storage.sync.set({"wiki": "http://wikipedia.org/wiki", "mail": "http://mail.google.com"});
+chrome.omnibox.setDefaultSuggestion({description: 'Enter a keyword below to go to a URL!'});
 
 chrome.omnibox.onInputEntered.addListener(function(text) {
     base = "";
@@ -23,3 +23,14 @@ chrome.omnibox.onInputEntered.addListener(function(text) {
     });
 });
 
+chrome.omnibox.onInputChanged.addListener(function(text, suggest) {
+    chrome.storage.sync.get(null, function(data) {
+        suggestions = [];
+        for (key in data) {
+            if (key.indexOf(text) > -1) {
+                suggestions.push({description: key, content: key});
+            }
+        }
+        suggest(suggestions);
+    });
+});
