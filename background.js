@@ -14,7 +14,7 @@ chrome.omnibox.onInputEntered.addListener(function(text) {
     chrome.storage.sync.get(base, function(res) {
 		chrome.tabs.getSelected(null, function(tab) {
             if (base in res) {
-			    url = res[base] + rest;
+			    url = res[base] + encodeURIComponent(rest);
 	    	    chrome.tabs.update(tab.id, {url: url});
             } else {
                 chrome.tabs.update(tab.id, {url: chrome.extension.getURL('/error.html')});
